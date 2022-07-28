@@ -1,0 +1,46 @@
+.todoInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputGroup{
+    position: relative;
+}
+.input{
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font: inherit;
+    color: #000;
+    background-color: transparent;
+    outline: 1px solid #fff;
+}
+.inputLabel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+.input:focus+.inputLabel,
+.input:valid+.inputLabel{
+    transform: translate(10px, -14px) scale(.8);
+    color: #000;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+.input:is(:focus, :valid){
+    outline-color: #000;
+}
+.button button{
+    color: #fff;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #1c9346;
+    cursor: pointer;
+    transition: background .2s;
+}
+.button button:hover{
+    background: #20b456;
+}
